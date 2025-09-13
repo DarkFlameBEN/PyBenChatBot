@@ -125,7 +125,7 @@ def create_app(collection, model):
                 .msg { margin: 5px 0; }
                 .user { color: blue; }
                 .bot { color: green; white-space: pre-wrap; } /* preserve line breaks */
-                footer { margin-top: 20px; font-size: 14px; color: #555; text-align: left;}
+                footer { margin-top: 20px; font-size: 14px; color: #555; text-align: right;}
             </style>
 
         </head>
