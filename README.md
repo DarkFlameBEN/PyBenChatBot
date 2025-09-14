@@ -33,5 +33,6 @@ Chatbot on your local repository (Run from workspace or specify the path):
  
 Chatbot on a specific module:
 > python -m pybenchatbot -t pybenutils -p 8000
+> python -m pybenchatbot -t pybenutils -i 0.0.0.0 -p 8000
 
 Activation time might take a few seconds while the module is being indexed.

@@ -217,6 +217,8 @@ def main():
     parser = argparse.ArgumentParser(description="Runs a local PyBenChatBot webserver")
     parser.add_argument('-t', "--target", type=str, default=".", help="Path or Python module to index",
                         required=False)
+    parser.add_argument('-i', "--ip", type=str, default='127.0.0.1', help="Webserver ip (default: 127.0.0.1)",
+                        required=False)
     parser.add_argument('-p', "--port", type=int, default=8000, help="Webserver port (default: 8000)",
                         required=False)
     args = parser.parse_args()
@@ -229,8 +231,8 @@ def main():
 
     app = create_app(collection, model)
 
-    print(f"🚀 Starting server at http://127.0.0.1:{args.port}")
-    uvicorn.run(app, host="127.0.0.1", port=args.port)
+    print(f"🚀 Starting server at http://{args.ip}:{args.port}")
+    uvicorn.run(app, host=args.ip, port=args.port)
 
 if __name__ == "__main__":
     main()
